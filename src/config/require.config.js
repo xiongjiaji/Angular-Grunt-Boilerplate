@@ -5,7 +5,7 @@ requirejs.config({
     
     waitSeconds: 120,
 
-    deps: ['app'],
+    // deps: ['app'],
 
     //enforceDefine: true,
 
