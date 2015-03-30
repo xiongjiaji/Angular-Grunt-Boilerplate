@@ -6,7 +6,7 @@ Grunt is used to automate your dev pipeline including copy files / uglify files 
 
 RequireJS is a great lib that makes modular programming possible and easy.
 
-Node.js is used to provide a proxy server to 
+Node.js is used to provide a proxy server。
 
 ##How To
 ###Precondition
