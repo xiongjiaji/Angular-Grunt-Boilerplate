@@ -39,7 +39,7 @@ module.exports = function(grunt) {
     grunt.config('requirejs', {
         dev: {
             options: {
-                name: 'app',
+                // name: 'app',
                 optimize: 'none',
                 baseUrl: 'src',
                 paths: paths,
