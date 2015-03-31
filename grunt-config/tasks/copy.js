@@ -1,5 +1,6 @@
 module.exports = function(grunt) {
     var path = require('path');
+    
     grunt.loadNpmTasks('grunt-contrib-copy')
 
     var buildDir = require('../buildDir.js')();

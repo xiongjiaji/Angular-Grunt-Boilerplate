@@ -1,11 +1,9 @@
-
 module.exports = function(grunt) {
     var path = require('path');
 
     grunt.loadNpmTasks('grunt-contrib-jade');
 
     var buildDir = require('../buildDir.js')();
-
 
     //For windows build replace \ by /
     var mainPathInterfix = (path.join('src', 'modules') + path.sep).replace(/\\/g,'/');
