@@ -27,4 +27,5 @@ module.exports = function(grunt) {
 
     grunt.registerTask('default', ['less:dev', 'jade:devall', 'jade:devindex', 'requirejs:dev', 'copy:dev']);
     grunt.registerTask('production', ['less:production', 'jade:productionall', 'jade:productionindex', 'requirejs:production', 'copy:production']);
+    grunt.registerTask('test', ['karma:run']);
 };
