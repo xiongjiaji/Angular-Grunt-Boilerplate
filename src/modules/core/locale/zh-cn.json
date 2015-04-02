@@ -1,0 +1,27 @@
+{
+	"core":{
+		"pageNotFound":{
+			"error":":( 404",
+			"pageMessage":"您查找的页面 '%{page}' 不存在.",
+			"homeLink":"返回"
+		}
+	},
+	"main":{
+		"header":{
+			"appTitle":"Angular",
+			"leftMenu":{
+				"home":"主页"
+			},
+			"rightMenu":{
+				"profile":"账户",
+				"settings":"设置",
+				"files":"文件",
+				"help":"帮助",
+				"about":"关于"
+			}
+		},
+		"home":{
+			"welcome":"欢迎！"
+		}
+	}
+}

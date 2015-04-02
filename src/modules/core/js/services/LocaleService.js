@@ -19,11 +19,14 @@ define([
                 'en-us': 'en-us',
                 'en': 'en-us',
                 'fr': 'fr-fr',
-                'fr-fr': 'fr-fr'
+                'fr-fr': 'fr-fr',
+                'zh-cn': 'zh-cn',
+                'zh': 'zh-cn',
             };
 
-            var lang = 'en-us';
-            var storedLang = appStateService.get('lang');
+            var lang = 'zh-cn';
+            // var storedLang = appStateService.get('lang');
+            var storedLang = 'zh-cn';
             if (storedLang && storedLang in supportedLocales) {
                 lang = supportedLocales[storedLang];
             } else if (typeof navigator.language === 'string') {
