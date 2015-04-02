@@ -5,7 +5,7 @@ define([
     'angular-ui-router',
 
     'main/manifest',
-    'core/manifest'
+    'core/manifest',
 ],function(ng){
 
     var app = ng.module('app',[
@@ -16,6 +16,10 @@ define([
         'HeaderApp',
         'HomeApp'
     ]);
+
+    app.run(['appStateService', function(appStateService){
+        appStateService.set('lang', 'zh');
+    }]);
 
     ng.element(document).ready(function () {
         ng.bootstrap(document, ['app']);

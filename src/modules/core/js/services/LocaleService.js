@@ -25,8 +25,8 @@ define([
             };
 
             var lang = 'zh-cn';
-            // var storedLang = appStateService.get('lang');
-            var storedLang = 'zh-cn';
+            var storedLang = appStateService.get('lang');
+            // var storedLang = 'zh-cn';
             if (storedLang && storedLang in supportedLocales) {
                 lang = supportedLocales[storedLang];
             } else if (typeof navigator.language === 'string') {
