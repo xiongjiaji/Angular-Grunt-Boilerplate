@@ -5,7 +5,7 @@ module.exports = function(grunt) {
 
   grunt.config('karma',{
     options: {
-            basePath: '../',
+            basePath: './',
 
             // web server port
             port: 9876,
@@ -24,8 +24,8 @@ module.exports = function(grunt) {
             exclude: [],
 
             files: [
-              'Angular-Grunt-Boilerplate/target/build/webapp/app.js',
-              'Angular-Grunt-Boilerplate/tests/spec/test.js',
+              'target/build/webapp/app.js',
+              'tests/spec/test.js',
             ],
 
             plugins : [
