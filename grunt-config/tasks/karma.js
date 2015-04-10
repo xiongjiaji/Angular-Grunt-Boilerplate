@@ -23,21 +23,48 @@ module.exports = function(grunt) {
 
             exclude: [],
 
+            
             files: [
-              'target/build/webapp/app.js',
-              'tests/spec/test.js',
-            ],
+          'src/lib/jquery-2.1.3.js',
+          'src/lib/angular.js',
+          'src/lib/angular-local-storage.js',
+          'src/lib/jasmine-jquery.js',
+          //'src/app.js',
+          // {pattern: 'dashboard/tests/spec/**/*.js', included: false},
+          // {pattern: 'dashboard/tests/helper/**/*.js', included: false},
+          // {pattern: 'dashboard/tests/lib/**/*.js', included: false},
+          // {pattern: 'dashboard/tests/mock/**/*.js', included: false},
+          {pattern: 'tests/test_main.js', included: true},
+          {pattern: 'target/build/webapp/**/*.js', included: false},
+          {pattern: 'src/lib/**/*.js', included: false},
+          // {pattern: 'dashboard/lib/**/*.js', included: false},
+          {pattern: 'src/modules/**/*.js', included: false},
+
+          {pattern: 'src/**/*.jade', included: false},
+
+          {
+              pattern: 'src/modules/core/locale/*.json',
+              served: true,
+              included: false
+          },
+
+
+          {pattern: 'tests/spec/test.js', included: false},
+          {pattern: 'target/build/webapp/tmp/views/**/*.js', included: false},
+          // {pattern: 'src/app.js', included: false},
+        ],
 
             plugins : [
                 'karma-jasmine',
                 'karma-phantomjs-launcher',
+                'karma-requirejs',
             ],
 
             // frameworks to use
             // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
             // requirejs issue, "Disconnected (1 times), because no message in 10000 ms",see below:
             // http://stackoverflow.com/questions/23667102/disconnected-1-times-because-no-message-in-10000-ms-using-karma-jasmine
-            frameworks: ['jasmine'],
+            frameworks: ['jasmine', 'requirejs'],
 
             // test results reporter to use
             // possible values: 'dots', 'progress'
