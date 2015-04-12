@@ -1,10 +1,10 @@
 module.exports = function(grunt) {
-  var path = require('path');
+    var path = require('path');
 
-  grunt.loadNpmTasks('grunt-karma');
+    grunt.loadNpmTasks('grunt-karma');
 
-  grunt.config('karma',{
-    options: {
+    grunt.config('karma',{
+        options: {
             basePath: './',
 
             // web server port
@@ -23,36 +23,29 @@ module.exports = function(grunt) {
 
             exclude: [],
 
-            
+        
             files: [
-          'src/lib/jquery-2.1.3.js',
-          'src/lib/angular.js',
-          'src/lib/angular-local-storage.js',
-          'src/lib/jasmine-jquery.js',
-          //'src/app.js',
-          // {pattern: 'dashboard/tests/spec/**/*.js', included: false},
-          // {pattern: 'dashboard/tests/helper/**/*.js', included: false},
-          // {pattern: 'dashboard/tests/lib/**/*.js', included: false},
-          // {pattern: 'dashboard/tests/mock/**/*.js', included: false},
-          {pattern: 'tests/test_main.js', included: true},
-          {pattern: 'target/build/webapp/**/*.js', included: false},
-          {pattern: 'src/lib/**/*.js', included: false},
-          // {pattern: 'dashboard/lib/**/*.js', included: false},
-          {pattern: 'src/modules/**/*.js', included: false},
+                'src/lib/jquery-2.1.3.js',
+                'src/lib/angular.js',
+                'src/lib/angular-local-storage.js',
+                'src/lib/jasmine-jquery.js',
+                //'src/app.js',
+                {pattern: 'tests/test_main.js', included: true},
+                {pattern: 'target/build/webapp/**/*.js', included: false},
+                {pattern: 'src/lib/**/*.js', included: false},
+                {pattern: 'src/modules/**/*.js', included: false},
 
-          {pattern: 'src/**/*.jade', included: false},
+                {pattern: 'src/**/*.jade', included: false},
 
-          {
-              pattern: 'src/modules/core/locale/*.json',
-              served: true,
-              included: false
-          },
+                {
+                    pattern: 'src/modules/core/locale/*.json',
+                    served: true,
+                    included: false
+                },
 
-
-          {pattern: 'tests/spec/test.js', included: false},
-          {pattern: 'target/build/webapp/tmp/views/**/*.js', included: false},
-          // {pattern: 'src/app.js', included: false},
-        ],
+                {pattern: 'tests/spec/test.js', included: false},
+                {pattern: 'target/build/webapp/tmp/views/**/*.js', included: false},
+            ],
 
             plugins : [
                 'karma-jasmine',
@@ -73,19 +66,18 @@ module.exports = function(grunt) {
             reporters: ['progress'],
             
             colors: true,
+        },
 
-    },
+        daemon: {
+            options: {
+                singleRun: false
+            }
+        },
 
-    daemon: {
-        options: {
-            singleRun: false
+        run: {
+            options: {
+              singleRun: true
+            }
         }
-    },
-
-    run: {
-        options: {
-          singleRun: true
-        }
-    }
-  });
+    });
 };

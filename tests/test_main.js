@@ -1,5 +1,3 @@
-var testMain = function() {
-
 var allTestFiles = [];
 var TEST_REGEXP = /test\.js$/;
 
@@ -14,14 +12,12 @@ Object.keys(window.__karma__.files).forEach(function(file) {
   }
 });
 
-console.log("allTestFiles");
-
 requirejs.config({
-  // Karma serves files under /base, which is the basePath from your config file
-  baseUrl: '/base',
+    // Karma serves files under /base, which is the basePath from your config file
+    baseUrl: '/base',
 
-  // example of using shim, to load non AMD libraries (such as underscore and jquery)
-  paths: {
+    // example of using shim, to load non AMD libraries (such as underscore and jquery)
+    paths: {
     "main":"src/modules/main/js",
     "core":"src/modules/core/js",
     "angular": "src/lib/angular",
@@ -47,9 +43,9 @@ requirejs.config({
     "views/core/loading-dots": "target/build/webapp/tmp/views/core/loading-dots",
     "views/main/home/home": "target/build/webapp/tmp/views/main/home/home",
     "polyglot": "src/lib/polyglot",
-  },
+    },
 
-  shim: {
+    shim: {
         jquery: {
             exports: 'jQuery'
         },
@@ -110,12 +106,9 @@ requirejs.config({
         }
     },
 
-  // dynamically load all test files
-  deps: ['tests/spec/test'],
+    // dynamically load all test files
+    deps: ['tests/spec/test'],
 
-  // we have to kickoff jasmine, as it is asynchronous
-  callback: window.__karma__.start
+    // we have to kickoff jasmine, as it is asynchronous
+    callback: window.__karma__.start
 });
-};
-
-testMain();
