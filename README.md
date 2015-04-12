@@ -48,3 +48,9 @@ Grunt Watch task will trigger auto-rebuild when source code changes
 ```bash
 $ grunt watch
 ```
+
+###Test
+Karma is used as a test runner.
+```bash
+$ grunt test
+```
